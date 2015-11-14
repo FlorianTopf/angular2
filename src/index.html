@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>angular-2</title>
+        <script src="lib/traceur-runtime.js"></script>
+        <script src="lib/system.js"></script>
+    </head>
+    <body>
+        <main>Loading...</main>
+
+        <script>
+            System.config({
+                defaultJSExtensions: true
+            });
+        </script>
+
+        <script src="lib/angular2.dev.js"></script>
+
+        <script>
+            System.import('main').catch(console.log.bind(console));
+        </script>
+    </body>
+</html>

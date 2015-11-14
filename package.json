@@ -1,0 +1,30 @@
+{
+  "name": "angular-2",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.36",
+    "systemjs": "0.18.17",
+    "traceur": "0.0.92"
+  },
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "gulp-concat": "2.6.0",
+    "gulp-rename": "1.2.2",
+    "gulp-shell": "0.4.3",
+    "gulp-tsd": "0.0.4",
+    "gulp-typescript": "^2.9.2",
+    "gulp-webserver": "0.9.1"
+  },
+  "description": "Angular 2 Tryouts",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlorianTopf/angular2.git"
+  },
+  "author": "Florian Topf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FlorianTopf/angular2/issues"
+  },
+  "homepage": "https://github.com/FlorianTopf/angular2#readme"
+}
