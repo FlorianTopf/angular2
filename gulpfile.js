@@ -40,8 +40,10 @@ gulp.task('tsd', function (callback) {
 // move dependencies into build dir
 gulp.task('dependencies', function () {
   return gulp.src([
-      'node_modules/traceur/bin/traceur-runtime.js',
-      'node_modules/systemjs/dist/system.js',
+      'node_modules/es6-shim/es6-shim.js',
+      'node_modules/angular2/bundles/angular2-polyfills.js',
+      'node_modules/systemjs/dist/system.src.js',
+      'node_modules/rxjs/bundles/Rx.js',
       'node_modules/angular2/bundles/angular2.dev.js'
     ])
     .pipe(gulp.dest('build/lib'));
@@ -51,7 +53,7 @@ gulp.task('dependencies', function () {
 gulp.task('ts', function () {
   var tsProject = ts.createProject('tsconfig.json');
   var tsResult = gulp.src([
-      'node_modules/angular2/bundles/typings/angular2/angular2.d.ts',
+      'typings/tsd.d.ts',
       'src/**/*.ts'
     ])
     .pipe(ts(tsProject));

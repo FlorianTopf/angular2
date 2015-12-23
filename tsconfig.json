@@ -1,9 +1,15 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "sourceMap": true,
-    "target": "es5"
-  }
+    "compilerOptions": {
+        "module": "system",
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "target": "es5",
+        "removeComments": false,
+        "noImplicitAny": false
+    },
+    "exclude": [
+      "node_modules"
+    ]
 }
