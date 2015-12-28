@@ -1,8 +1,10 @@
 import {
   Component,
   View,
-  bootstrap
-} from 'angular2/angular2';
+} from 'angular2/core';
+import {
+    bootstrap
+} from 'angular2/platform/browser';
 
 import HelloWorld from './hello-world/hello-world';
 
@@ -12,7 +14,7 @@ import HelloWorld from './hello-world/hello-world';
 
 @View({
   directives: [ HelloWorld ],
-  template: '<hello-world></hello-world>'
+  template: `<hello-world></hello-world>`
 })
 
 class Main {
