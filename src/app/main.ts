@@ -7,11 +7,12 @@ import {
 } from 'angular2/platform/browser';
 
 import HelloWorld from './hello-world/hello-world';
+import RedditApp from './reddit-app/reddit-app';
 
 @Component({
-    directives: [HelloWorld],
+    directives: [HelloWorld, RedditApp],
     selector: 'main',
-    template: `<hello-world></hello-world>`
+    templateUrl: 'app/main.html'
 })
 
 class Main {

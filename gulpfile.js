@@ -32,14 +32,22 @@ gulp.task('typings', function () {
 });
 
 // move lib dependencies into build dir
-gulp.task('dependencies', function () {
+gulp.task('dependencies', ['fonts'], function () {
     return gulp.src([
         'node_modules/es6-shim/es6-shim.js',
         'node_modules/angular2/bundles/angular2-polyfills.js',
         'node_modules/systemjs/dist/system.src.js',
         'node_modules/rxjs/bundles/Rx.js',
-        'node_modules/angular2/bundles/angular2.dev.js'
+        'node_modules/angular2/bundles/angular2.dev.js',
+        'semantic/dist/semantic.css'
     ]).pipe(gulp.dest('build/lib'));
+});
+
+// move font dependencies into build dir
+gulp.task('fonts', function () {
+   return gulp.src([
+       'semantic/dist/themes/default/assets/fonts/*'
+   ]).pipe(gulp.dest('build/lib/themes/default/assets/fonts'));
 });
 
 // lint typescript files
