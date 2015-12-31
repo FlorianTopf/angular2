@@ -8,14 +8,15 @@ import {
 } from 'angular2/platform/browser';
 
 import HelloWorld from './hello-world/hello-world';
+import RedditApp from './reddit-app/reddit-app';
 
 @Component({
     selector: 'main'
 })
 
 @View({
-    directives: [HelloWorld],
-    template: `<hello-world></hello-world>`
+    directives: [HelloWorld, RedditApp],
+    templateUrl: 'app/main.html'
 })
 
 class Main {
