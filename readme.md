@@ -7,5 +7,7 @@ The integrated examples are heavily influenced by the tutorials provided in **ng
 
 ### How to setup
   - Run `npm install` in the root directory of the repository
+  - For semantic-ui installation just choose the default answers to the given questions
+  - Go to `semantic/` and run `gulp build`
   - Run `gulp` in the root directory to move compiled files and assets into `build` directory
   - Run `gulp serve` to run the application
