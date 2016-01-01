@@ -1,6 +1,6 @@
 import {
-  Component,
-  View,
+    Component,
+    View,
 } from 'angular2/core';
 import {
     bootstrap
@@ -9,12 +9,12 @@ import {
 import HelloWorld from './hello-world/hello-world';
 
 @Component({
-  selector: 'main'
+    selector: 'main'
 })
 
 @View({
-  directives: [ HelloWorld ],
-  template: `<hello-world></hello-world>`
+    directives: [HelloWorld],
+    template: `<hello-world></hello-world>`
 })
 
 class Main {
