@@ -1,16 +1,17 @@
-var gulp = require('gulp'),
-    concat = require('gulp-concat'),
-    rename = require('gulp-rename'),
-    shell = require('gulp-shell'),
-    ts = require('gulp-typescript'),
-    tsd = require('gulp-tsd'),
-    webserver = require('gulp-webserver');
+var gulp = require('gulp');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var shell = require('gulp-shell');
+var ts = require('gulp-typescript');
+var tsd = require('gulp-tsd');
+var webserver = require('gulp-webserver');
+var tslint = require('gulp-tslint');
 
 // run init tasks
 gulp.task('default', ['dependencies', 'ts', 'html', 'css']);
 
 // run development task
-gulp.task('dev', ['watch', 'serve']);
+gulp.task('dev', ['default', 'watch', 'serve']);
 
 // serve the build dir
 gulp.task('serve', function () {
@@ -44,8 +45,15 @@ gulp.task('dependencies', function () {
     ]).pipe(gulp.dest('build/lib'));
 });
 
+// lint typescript files
+gulp.task('tslint', function () {
+    return gulp.src('src/**/*.ts')
+        .pipe(tslint())
+        .pipe(tslint.report('verbose'));
+});
+
 // compile & move js
-gulp.task('ts', function () {
+gulp.task('ts', ['tslint'], function () {
     var tsProject = ts.createProject('tsconfig.json');
     var tsResult = gulp.src([
         'typings/tsd.d.ts',

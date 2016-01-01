@@ -20,7 +20,7 @@ export default class HelloWorld {
     public names: string[];
 
     constructor () {
-        console.info('Angular2 Component Mounted Successfully');
+        console.info('HelloWorld Component Mounted Successfully');
         this.names = ['Florian', 'Sabrina'];
     }
 }

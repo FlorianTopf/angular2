@@ -1,6 +1,6 @@
 import {
     Component,
-    View,
+    View
 } from 'angular2/core';
 
 import {
@@ -19,7 +19,9 @@ import HelloWorld from './hello-world/hello-world';
 })
 
 class Main {
-
+    constructor () {
+        console.info('Main Component Mounted Successfully');
+    }
 }
 
 bootstrap(Main);
