@@ -8,9 +8,10 @@ import {
 
 import HelloWorld from './hello-world/hello-world';
 import RedditApp from './reddit-app/reddit-app';
+import InventoryApp from './inventory-app/inventory-app';
 
 @Component({
-    directives: [HelloWorld, RedditApp],
+    directives: [HelloWorld, RedditApp, InventoryApp],
     selector: 'main',
     templateUrl: 'app/main.html'
 })
