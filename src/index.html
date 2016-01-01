@@ -11,6 +11,9 @@
         <script src="lib/system.src.js"></script>
         <script src="lib/Rx.js"></script>
         <script src="lib/angular2.dev.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="lib/semantic.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
 
     <body>
@@ -27,6 +30,18 @@
             System.import('app/main.js').catch(console.log.bind(console));
         </script>
 
-        <main>Loading...</main>
+        <div class="ui menu">
+            <div class="ui container">
+                <div class="header item borderless">
+                    <h1 class="ui header">
+                        Angular 2 Simple Application
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui main text container">
+            <main>Loading...</main>
+        </div>
     </body>
 </html>
