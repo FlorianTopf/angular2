@@ -16,8 +16,10 @@
         "gulp-rename": "1.2.2",
         "gulp-shell": "0.4.3",
         "gulp-tsd": "0.0.4",
+        "gulp-tslint": "^4.2.2",
         "gulp-typescript": "^2.9.2",
-        "gulp-webserver": "0.9.1"
+        "gulp-webserver": "0.9.1",
+        "tslint": "^3.2.1"
     },
     "description": "Angular 2 Tryouts",
     "main": "gulpfile.js",
