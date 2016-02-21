@@ -25,7 +25,7 @@ gulp.task('watch', function () {
     gulp.watch('src/**/*.css', ['css']);
 });
 
-// install type definitions
+// install type definitions (deprecated)
 gulp.task('tsd', function (callback) {
     tsd({
         "command": "reinstall",
@@ -57,6 +57,7 @@ gulp.task('ts', ['tslint'], function () {
     var tsProject = ts.createProject('tsconfig.json');
     var tsResult = gulp.src([
         'typings/tsd.d.ts',
+        'node_modules/angular2/typings/browser.d.ts',
         'src/**/*.ts'
     ]).pipe(ts(tsProject));
     return tsResult.js.pipe(gulp.dest('build'));
