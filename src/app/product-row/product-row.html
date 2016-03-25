@@ -1,0 +1,9 @@
+<div class="product-row cf" (click)="clicked()">
+    <product-image [product]="product"></product-image>
+    <div class="product-info">
+        <div class="product-sku">SKU #{{ product.sku }}</div>
+        <div class="product-name">{{ product.name }}</div>
+        <product-department [product]="product"></product-department>
+    </div>
+    <price-display [price]="product.price"></price-display>
+</div>
