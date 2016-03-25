@@ -1,6 +1,5 @@
 import {
-    Component,
-    View
+    Component
 } from 'angular2/core';
 
 import {
@@ -8,11 +7,8 @@ import {
 } from 'angular2/common';
 
 @Component({
-    selector: 'hello-world'
-})
-
-@View({
     directives: [NgFor],
+    selector: 'hello-world',
     templateUrl: 'app/hello-world/hello-world.html'
 })
 

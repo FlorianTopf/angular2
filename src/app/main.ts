@@ -1,6 +1,5 @@
 import {
-    Component,
-    View
+    Component
 } from 'angular2/core';
 
 import {
@@ -10,11 +9,8 @@ import {
 import HelloWorld from './hello-world/hello-world';
 
 @Component({
-    selector: 'main'
-})
-
-@View({
     directives: [HelloWorld],
+    selector: 'main',
     template: `<hello-world></hello-world>`
 })
 
