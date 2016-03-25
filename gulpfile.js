@@ -3,7 +3,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var shell = require('gulp-shell');
 var ts = require('gulp-typescript');
-var tsd = require('gulp-tsd');
+var typings = require('gulp-typings');
 var webserver = require('gulp-webserver');
 var tslint = require('gulp-tslint');
 
@@ -25,13 +25,10 @@ gulp.task('watch', function () {
     gulp.watch('src/**/*.css', ['css']);
 });
 
-// install type definitions (deprecated)
-gulp.task('tsd', function (callback) {
-    tsd({
-        "command": "reinstall",
-        "latest": true,
-        "config": "tsd.json"
-    }, callback);
+// install type definitions
+gulp.task('typings', function () {
+    gulp.src('./typings.json')
+        .pipe(typings());
 });
 
 // move lib dependencies into build dir
@@ -53,10 +50,9 @@ gulp.task('tslint', function () {
 });
 
 // compile & move js
-gulp.task('ts', ['tslint'], function () {
+gulp.task('ts', ['tslint', 'typings'], function () {
     var tsProject = ts.createProject('tsconfig.json');
     var tsResult = gulp.src([
-        'typings/tsd.d.ts',
         'node_modules/angular2/typings/browser.d.ts',
         'src/**/*.ts'
     ]).pipe(ts(tsProject));
