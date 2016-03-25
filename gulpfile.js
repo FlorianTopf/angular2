@@ -61,7 +61,7 @@ gulp.task('tslint', function () {
 gulp.task('ts', ['tslint', 'typings'], function () {
     var tsProject = ts.createProject('tsconfig.json');
     var tsResult = gulp.src([
-        'node_modules/angular2/typings/browser.d.ts',
+        'typings/browser.d.ts',
         'src/**/*.ts'
     ]).pipe(ts(tsProject));
     return tsResult.js.pipe(gulp.dest('build'));

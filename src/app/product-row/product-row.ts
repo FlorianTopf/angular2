@@ -10,8 +10,8 @@ import ProductDepartment from './product-department';
 
 @Component({
     directives: [ProductImage, ProductDepartment, PriceDisplay],
-    inputs: ['product'],
     host: { 'class': 'item' },
+    inputs: ['product'],
     outputs: ['onSelect'],
     selector: 'product-row',
     templateUrl: 'app/product-row/product-row.html'
