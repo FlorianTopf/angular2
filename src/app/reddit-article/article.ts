@@ -1,4 +1,4 @@
-export default class Article {
+export class Article {
     public title: string;
     public link: string;
     public votes: number;

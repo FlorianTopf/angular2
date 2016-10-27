@@ -1,24 +1,14 @@
-import {
-    Component,
-    EventEmitter
-} from 'angular2/core';
+import {Component, EventEmitter, Input} from '@angular/core';
 
-import {
-    NgFor
-} from 'angular2/common';
-
-import Product from '../product-row/product';
-import ProductRow from '../product-row/product-row';
+import {Product} from '../product-row/product';
 
 @Component({
-    directives: [NgFor, ProductRow],
-    inputs: ['productList: products'],
     selector: 'products-list',
     outputs: ['onProductSelected'],
     templateUrl: 'app/product-list/product-list.html'
 })
-
-export default class ProductsList {
+export class ProductsList {
+    @Input('products')
     productList: Product[];
 
     currentProduct: Product;

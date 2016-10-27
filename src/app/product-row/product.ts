@@ -1,4 +1,4 @@
-export default class Product {
+export class Product {
     public sku: string;
     public name: string;
     public imageUrl: string;

@@ -1,19 +1,14 @@
-import {
-    Component
-} from 'angular2/core';
+import {Component, Input} from '@angular/core';
 
-import Article from './article';
+import {Article} from './article';
 
 @Component({
-    inputs: ['article'],
-    host: {
-        'class': 'row'
-    },
+    host: {'class': 'row'},
     selector: 'reddit-article',
     templateUrl: 'app/reddit-article/reddit-article.html'
 })
-
-export default class RedditArticle {
+export class RedditArticle {
+    @Input()
     public article: Article;
 
     constructor () {

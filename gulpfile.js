@@ -8,7 +8,7 @@ var webserver = require('gulp-webserver');
 var tslint = require('gulp-tslint');
 
 // run init tasks
-gulp.task('default', ['dependencies', 'ts', 'html', 'css']);
+gulp.task('default', ['libraries', 'ts', 'html', 'css']);
 
 // run development task
 gulp.task('dev', ['default', 'watch', 'serve']);
@@ -32,13 +32,24 @@ gulp.task('typings', function () {
 });
 
 // move lib dependencies into build dir
-gulp.task('dependencies', ['fonts'], function () {
+gulp.task('libraries', ['fonts'], function () {
+    gulp.src('systemjs.config.js')
+        .pipe(gulp.dest('build'));
+
+    gulp.src(['node_modules/rxjs/**/*'])
+        .pipe(gulp.dest('build/lib/rxjs'));
+
+    gulp.src(['node_modules/angular-in-memory-web-api/**/*'])
+        .pipe(gulp.dest('build/lib/angular-in-memory-web-api'));
+
+    gulp.src(['node_modules/@angular/**/*'])
+        .pipe(gulp.dest('build/lib/@angular'));
+
     return gulp.src([
-        'node_modules/es6-shim/es6-shim.js',
-        'node_modules/angular2/bundles/angular2-polyfills.js',
+        'node_modules/core-js/client/shim.min.js',
+        'node_modules/zone.js/dist/zone.js',
+        'node_modules/reflect-metadata/Reflect.js',
         'node_modules/systemjs/dist/system.src.js',
-        'node_modules/rxjs/bundles/Rx.js',
-        'node_modules/angular2/bundles/angular2.dev.js',
         'semantic/dist/semantic.css'
     ]).pipe(gulp.dest('build/lib'));
 });

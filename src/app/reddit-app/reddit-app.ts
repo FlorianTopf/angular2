@@ -1,16 +1,8 @@
-import {
-    Component
-} from 'angular2/core';
+import {Component} from '@angular/core';
 
-import {
-    NgFor
-} from 'angular2/common';
-
-import RedditArticle from '../reddit-article/reddit-article';
-import Article from '../reddit-article/article';
+import {Article} from '../reddit-article/article';
 
 @Component({
-    directives: [RedditArticle, NgFor],
     selector: 'reddit-app',
     templateUrl: 'app/reddit-app/reddit-app.html'
 })
