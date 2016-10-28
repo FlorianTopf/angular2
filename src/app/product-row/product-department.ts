@@ -1,27 +1,18 @@
-import {
-    Component
-} from 'angular2/core';
+import {Component, Input} from '@angular/core';
 
-import {
-    NgFor,
-    NgIf
-} from 'angular2/common';
-
-import Product from './product';
+import {Product} from './product';
 
 @Component({
-    directives: [NgFor, NgIf],
-    inputs: ['product'],
     selector: 'product-department',
     template:
         `<div class="product-department">
-            <span *ngFor="#name of product.department; #i=index">
+            <span *ngFor="let name of product.department; let i=index">
                 <a href="#">{{ name }}</a>
                 <span>{{i < (product.department.length-1) ? '>' : ''}}</span>
             </span>
-        </div>`
+        </div>`,
 })
-
-export default class ProductDepartment {
+export class ProductDepartment {
+    @Input()
     product: Product;
 }

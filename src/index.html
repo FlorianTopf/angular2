@@ -6,30 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>angular-2</title>
 
-        <script src="lib/angular2-polyfills.js"></script>
-        <script src="lib/es6-shim.js"></script>
-        <script src="lib/system.src.js"></script>
-        <script src="lib/Rx.js"></script>
-        <script src="lib/angular2.dev.js"></script>
-
         <link rel="stylesheet" type="text/css" href="lib/semantic.css">
         <link rel="stylesheet" type="text/css" href="styles.css">
+
+        <script src="lib/shim.min.js"></script>
+
+        <script src="lib/zone.js"></script>
+        <script src="lib/Reflect.js"></script>
+        <script src="lib/system.src.js"></script>
+
+        <script src="systemjs.config.js"></script>
+
+        <script>
+            System.import('app').catch(function(err){ console.error(err); });
+        </script>
     </head>
 
     <body>
-        <script>
-            System.config({
-                packages: {
-                    app: {
-                        format: 'register',
-                        defaultExtension: 'js'
-                    }
-                }
-            });
-
-            System.import('app/main.js').catch(console.log.bind(console));
-        </script>
-
         <div class="ui menu">
             <div class="ui container">
                 <div class="header item borderless">
@@ -41,7 +34,7 @@
         </div>
 
         <div class="ui main text container">
-            <main>Loading...</main>
+            <app>Loading...</app>
         </div>
     </body>
 </html>

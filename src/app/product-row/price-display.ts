@@ -1,13 +1,10 @@
-import {
-    Component
-} from 'angular2/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
-    inputs: ['price'],
     selector: 'price-display',
-    template: `<div class="price-display">{{ price }}</div>`
+    template: `<div class="price-display">{{ price }}</div>`,
 })
-
-export default class PriceDisplay {
+export class PriceDisplay {
+    @Input()
     price: number;
 }

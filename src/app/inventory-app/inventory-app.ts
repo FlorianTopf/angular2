@@ -1,17 +1,12 @@
-import {
-    Component
-} from 'angular2/core';
+import {Component} from '@angular/core';
 
-import Product from '../product-row/product';
-import ProductList from '../product-list/product-list';
+import {Product} from '../product-row/product';
 
 @Component({
-    directives: [ProductList],
     selector: 'inventory-app',
-    templateUrl: 'app/inventory-app/inventory-app.html'
+    templateUrl: 'app/inventory-app/inventory-app.html',
 })
-
-export default class InventoryApp {
+export class InventoryApp {
     products: Product[];
 
     constructor () {

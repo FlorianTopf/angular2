@@ -1,18 +1,10 @@
-import {
-    Component
-} from 'angular2/core';
-
-import {
-    NgFor
-} from 'angular2/common';
+import {Component} from '@angular/core';
 
 @Component({
-    directives: [NgFor],
     selector: 'hello-world',
-    templateUrl: 'app/hello-world/hello-world.html'
+    templateUrl: 'app/hello-world/hello-world.html',
 })
-
-export default class HelloWorld {
+export class HelloWorldComponent {
     public names: string[];
 
     constructor () {

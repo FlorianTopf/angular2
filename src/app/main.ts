@@ -1,25 +1,7 @@
-import {
-    Component
-} from 'angular2/core';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {PlatformRef} from '@angular/core';
 
-import {
-    bootstrap
-} from 'angular2/platform/browser';
+import {AppModule} from './app.module';
 
-import HelloWorld from './hello-world/hello-world';
-import RedditApp from './reddit-app/reddit-app';
-import InventoryApp from './inventory-app/inventory-app';
-
-@Component({
-    directives: [HelloWorld, RedditApp, InventoryApp],
-    selector: 'main',
-    templateUrl: 'app/main.html'
-})
-
-class Main {
-    constructor () {
-        console.info('Main Component Mounted Successfully');
-    }
-}
-
-bootstrap(Main);
+const platform: PlatformRef = platformBrowserDynamic();
+platform.bootstrapModule(AppModule);

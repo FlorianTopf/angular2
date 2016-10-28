@@ -1,5 +1,5 @@
 <div class="products-list">
-    <product-row *ngFor="#product of productList"
+    <product-row *ngFor="let product of productList"
                  [product]="product"
                  (onSelect)="clicked(product)"
                  [class.selected]="isSelected(product)">

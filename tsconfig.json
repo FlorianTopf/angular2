@@ -1,15 +1,19 @@
 {
-    "compilerOptions": {
-        "module": "system",
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "sourceMap": true,
-        "target": "es5",
-        "removeComments": false,
-        "noImplicitAny": true
-    },
-    "exclude": [
-      "node_modules"
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "core-js",
+      "node"
     ]
+  }
 }
