@@ -5,7 +5,7 @@ import {Product} from './product';
 @Component({
     host: { 'class': 'item' },
     selector: 'product-row',
-    templateUrl: 'app/product-row/product-row.html'
+    templateUrl: 'app/product-row/product-row.html',
 })
 export class ProductRow {
     @Input()

@@ -7,6 +7,13 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "removeComments": false,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "core-js",
+      "node"
+    ]
   }
 }

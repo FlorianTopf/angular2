@@ -4,7 +4,7 @@ import {Product} from '../product-row/product';
 
 @Component({
     selector: 'inventory-app',
-    templateUrl: 'app/inventory-app/inventory-app.html'
+    templateUrl: 'app/inventory-app/inventory-app.html',
 })
 export class InventoryApp {
     products: Product[];

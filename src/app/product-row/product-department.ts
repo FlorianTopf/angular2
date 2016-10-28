@@ -10,7 +10,7 @@ import {Product} from './product';
                 <a href="#">{{ name }}</a>
                 <span>{{i < (product.department.length-1) ? '>' : ''}}</span>
             </span>
-        </div>`
+        </div>`,
 })
 export class ProductDepartment {
     @Input()
