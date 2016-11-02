@@ -5,6 +5,5 @@ import {Component, Input} from '@angular/core';
     template: `<div class="price-display">{{ price }}</div>`,
 })
 export class PriceDisplay {
-    @Input()
-    price: number;
+    @Input() price: number;
 }

@@ -8,11 +8,9 @@ import {Product} from './product';
     templateUrl: 'app/product-row/product-row.html',
 })
 export class ProductRow {
-    @Input()
-    product: Product;
+    @Input() product: Product;
 
-    @Output()
-    onSelect: EventEmitter<Product>;
+    @Output() onSelect: EventEmitter<Product>;
 
     constructor () {
         this.onSelect = new EventEmitter();

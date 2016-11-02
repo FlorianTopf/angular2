@@ -22,6 +22,6 @@ import {PriceDisplay} from '../product-row/price-display';
 })
 export class InventoryAppModule {
     constructor () {
-        console.info('Inventory App Module Mounted Successfully');
+        console.info('InventoryApp Module Mounted Successfully');
     }
 }

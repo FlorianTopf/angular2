@@ -8,8 +8,7 @@ import {Product} from '../product-row/product';
     templateUrl: 'app/product-list/product-list.html',
 })
 export class ProductsList {
-    @Input('products')
-    productList: Product[];
+    @Input('products') productList: Product[];
 
     currentProduct: Product;
 

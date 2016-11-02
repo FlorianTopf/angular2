@@ -6,6 +6,6 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
     constructor () {
-        console.info('Main Component Mounted Successfully');
+        console.info('App Component Mounted Successfully');
     }
 }
