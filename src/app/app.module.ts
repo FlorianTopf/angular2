@@ -6,6 +6,7 @@ import {HelloWorldComponent} from './hello-world/hello-world';
 import {RedditAppModule} from './reddit-app/reddit-app.module';
 import {InventoryAppModule} from './inventory-app/inventory-app.module';
 import {FormsAppModule} from './forms-app/forms-app.module';
+import {HttpAppModule} from './http-app/http-app.module';
 
 @NgModule({
     imports: [
@@ -13,6 +14,7 @@ import {FormsAppModule} from './forms-app/forms-app.module';
         RedditAppModule,
         InventoryAppModule,
         FormsAppModule,
+        HttpAppModule,
     ],
     declarations: [
         AppComponent,
