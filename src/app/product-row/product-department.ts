@@ -13,6 +13,5 @@ import {Product} from './product';
         </div>`,
 })
 export class ProductDepartment {
-    @Input()
-    product: Product;
+    @Input() product: Product;
 }

@@ -6,6 +6,8 @@ var ts = require('gulp-typescript');
 var webserver = require('gulp-webserver');
 var tslint = require('gulp-tslint');
 
+// TODO add clean tasks here
+
 // run init tasks
 gulp.task('default', ['libraries', 'ts', 'html', 'css']);
 

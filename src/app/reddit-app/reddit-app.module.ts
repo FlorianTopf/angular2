@@ -14,6 +14,6 @@ import {RedditApp} from './reddit-app';
 })
 export class RedditAppModule {
     constructor () {
-        console.info('Reddit App Module Mounted Successfully');
+        console.info('RedditApp Module Mounted Successfully');
     }
 }

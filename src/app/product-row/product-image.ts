@@ -8,6 +8,5 @@ import {Product} from './product';
     template: `<img class="product-image" [src]="product.imageUrl">`,
 })
 export class ProductImage {
-    @Input()
-    product: Product;
+    @Input() product: Product;
 }

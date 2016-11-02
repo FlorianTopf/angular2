@@ -8,8 +8,7 @@ import {Article} from './article';
     templateUrl: 'app/reddit-article/reddit-article.html',
 })
 export class RedditArticle {
-    @Input()
-    public article: Article;
+    @Input() article: Article;
 
     constructor () {
         console.info('RedditArticle Component Mounted Successfully');

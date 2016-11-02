@@ -83,3 +83,7 @@ ul.ui.list li:before {
 .cf {
     *zoom: 1;
 }
+
+.ui.form .error.message {
+    display: block;
+}
