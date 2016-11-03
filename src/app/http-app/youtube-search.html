@@ -2,19 +2,22 @@
     <div class="one column row">
         <div class="column">
             <h2>YouTube Search
-                <img style="float: right;" *ngIf="loading" src="app/http-app/images/loading.gif">
+                <img style="float: right;"
+                     *ngIf="loading"
+                     src="app/http-app/images/loading.gif">
             </h2>
         </div>
     </div>
-
     <div class="one column row">
-        <div class="ui form field column">
-            <search-box (loading)="loading = $event"
-                        (results)="updateResults($event)"></search-box>
+        <div class="column">
+            <search-box class="ui form"
+                        (loading)="loading = $event"
+                        (results)="updateResults($event)">
+            </search-box>
         </div>
     </div>
-
-    <div class="three column row">
-        <search-result class="column" *ngFor="let result of results" [result]="result"></search-result>
-    </div>
+    <search-result class="four wide column"
+                   *ngFor="let result of results"
+                   [result]="result">
+    </search-result>
 </div>

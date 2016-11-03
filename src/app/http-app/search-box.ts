@@ -6,7 +6,7 @@ import {YouTubeService} from './youtube.service';
 
 @Component({
     selector: 'search-box',
-    template: `<input type="text" class="form-control" placeholder="Search" autofocus>`,
+    template: `<input type="text" class="field" placeholder="Search" autofocus>`,
 })
 export class SearchBoxComponent implements OnInit {
     @Output() public loading: EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -23,7 +23,7 @@ export class SearchBoxComponent implements OnInit {
         this.el = el;
     }
 
-    ngOnInit(): void {
+    public ngOnInit(): void {
         // convert the `keyup` event into an observable stream
         Observable.fromEvent(this.el.nativeElement, 'keyup')
             .map((e: any) => e.target.value) // extract the value of the input

@@ -8,6 +8,7 @@ import {YouTubeSearchComponent} from './youtube-search';
 import {SearchBoxComponent} from './search-box';
 import {SearchResultComponent} from './search-result';
 import {YouTubeService, YOUTUBE_API_KEY, YOUTUBE_API_URL} from './youtube.service';
+import {AdvancedHttpComponent} from './advanced-http';
 
 @NgModule({
     imports: [
@@ -17,6 +18,7 @@ import {YouTubeService, YOUTUBE_API_KEY, YOUTUBE_API_URL} from './youtube.servic
     declarations: [
         HttpApp,
         SimpleHttpComponent,
+        AdvancedHttpComponent,
         YouTubeSearchComponent,
         SearchBoxComponent,
         SearchResultComponent,
@@ -29,7 +31,7 @@ import {YouTubeService, YOUTUBE_API_KEY, YOUTUBE_API_URL} from './youtube.servic
     ],
 })
 export class HttpAppModule {
-    constructor () {
+    constructor() {
         console.info('HttpApp Module Mounted Successfully');
     }
 }

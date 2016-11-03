@@ -6,16 +6,16 @@ import {Http, Response} from '@angular/http';
     templateUrl: 'app/http-app/simple-http.html',
 })
 export class SimpleHttpComponent {
-    http: Http;
-    data: Object;
-    loading: boolean;
+    public data: Object;
+    public loading: boolean;
+    private http: Http;
 
     constructor(http: Http) {
         this.http = http;
         console.info('SimpleHttp Component Mounted Successfully');
     }
 
-    makeRequest(): void {
+    public makeRequest(): void {
         this.loading = true;
         this.http
             .request('http://jsonplaceholder.typicode.com/posts/1')

@@ -21,5 +21,5 @@ export class SearchResult {
     templateUrl: 'app/http-app/search-result.html',
 })
 export class SearchResultComponent {
-    @Input() result: SearchResult;
+    @Input() public result: SearchResult;
 }
