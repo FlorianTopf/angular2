@@ -15,7 +15,7 @@ export class ProductsList {
     onProductSelected: EventEmitter<Product>;
 
     constructor () {
-        this.onProductSelected = new EventEmitter();
+        this.onProductSelected = new EventEmitter<Product>();
     }
 
     clicked (product: Product): void {

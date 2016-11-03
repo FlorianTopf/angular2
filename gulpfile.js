@@ -9,7 +9,7 @@ var tslint = require('gulp-tslint');
 // TODO add clean tasks here
 
 // run init tasks
-gulp.task('default', ['libraries', 'ts', 'html', 'css']);
+gulp.task('default', ['libraries', 'ts', 'html', 'images', 'css']);
 
 // run development task
 gulp.task('dev', ['default', 'watch', 'serve']);
@@ -27,7 +27,10 @@ gulp.task('watch', function () {
 });
 
 // move lib dependencies into build dir
-gulp.task('libraries', ['fonts'], function () {
+gulp.task('libraries', function () {
+    gulp.src('semantic/dist/themes/default/assets/fonts/*')
+        .pipe(gulp.dest('build/lib/themes/default/assets/fonts'));
+
     gulp.src('systemjs.config.js').pipe(gulp.dest('build'));
 
     gulp.src('node_modules/rxjs/**/*')
@@ -49,13 +52,6 @@ gulp.task('libraries', ['fonts'], function () {
         .pipe(gulp.dest('build/lib'));
 });
 
-// move font dependencies into build dir
-gulp.task('fonts', function () {
-   return gulp
-       .src('semantic/dist/themes/default/assets/fonts/*')
-       .pipe(gulp.dest('build/lib/themes/default/assets/fonts'));
-});
-
 // lint typescript files
 gulp.task('tslint', function () {
     return gulp
@@ -74,6 +70,11 @@ gulp.task('ts', ['tslint'], function () {
 // move html
 gulp.task('html', function () {
     return gulp.src('src/**/*.html').pipe(gulp.dest('build'))
+});
+
+// move images
+gulp.task('images', function () {
+    return gulp.src('src/**/*.gif').pipe(gulp.dest('build'))
 });
 
 // move css

@@ -13,7 +13,7 @@ export class ProductRow {
     @Output() onSelect: EventEmitter<Product>;
 
     constructor () {
-        this.onSelect = new EventEmitter();
+        this.onSelect = new EventEmitter<Product>();
     }
 
     clicked (): void {
