@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
     templateUrl: 'app/http-app/http-app.html',
 })
 export class HttpApp {
-    constructor () {
+    constructor() {
         console.info('HttpApp Component Mounted Successfully');
     }
 }

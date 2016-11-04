@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
     templateUrl: 'app/forms-app/forms-app.html',
 })
 export class FormsApp {
-    constructor () {
+    constructor() {
         console.info('Forms App Component Mounted Successfully');
     }
 }

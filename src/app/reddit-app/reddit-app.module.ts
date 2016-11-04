@@ -13,7 +13,7 @@ import {RedditApp} from './reddit-app';
     exports: [RedditApp],
 })
 export class RedditAppModule {
-    constructor () {
+    constructor() {
         console.info('RedditApp Module Mounted Successfully');
     }
 }

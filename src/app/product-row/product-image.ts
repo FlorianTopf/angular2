@@ -3,10 +3,10 @@ import {Component, Input} from '@angular/core';
 import {Product} from './product';
 
 @Component({
-    host: { 'class': 'ui small' },
+    host: { 'class': 'six wide column' },
     selector: 'product-image',
-    template: `<img class="product-image" [src]="product.imageUrl">`,
+    template: `<img class="ui medium bordered image" [src]="product.imageUrl">`,
 })
 export class ProductImage {
-    @Input() product: Product;
+    @Input() public product: Product;
 }

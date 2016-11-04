@@ -19,7 +19,7 @@ import {ProductForm} from './product-form';
     ],
 })
 export class FormsAppModule {
-    constructor () {
+    constructor() {
         console.info('FormsApp Module Mounted Successfully');
     }
 }

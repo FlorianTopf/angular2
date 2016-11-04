@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 export class HelloWorldComponent {
     public names: string[];
 
-    constructor () {
+    constructor() {
         console.info('HelloWorld Component Mounted Successfully');
         this.names = ['Florian', 'Sabrina'];
     }

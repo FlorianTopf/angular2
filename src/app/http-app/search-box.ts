@@ -9,8 +9,8 @@ import {YouTubeService} from './youtube.service';
     template: `<input type="text" class="field" placeholder="Search" autofocus>`,
 })
 export class SearchBoxComponent implements OnInit {
-    @Output() public loading: EventEmitter<boolean> = new EventEmitter<boolean>();
-    @Output() public results: EventEmitter<SearchResult[]> = new EventEmitter<SearchResult[]>();
+    @Output() public loading: EventEmitter<boolean>;
+    @Output() public results: EventEmitter<SearchResult[]>;
 
     private youtube: YouTubeService;
     private el: ElementRef;
@@ -21,6 +21,8 @@ export class SearchBoxComponent implements OnInit {
     ) {
         this.youtube = youtube;
         this.el = el;
+        this.loading = new EventEmitter<boolean>();
+        this.results = new EventEmitter<SearchResult[]>();
     }
 
     public ngOnInit(): void {

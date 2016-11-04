@@ -1,11 +1,11 @@
 import {Component, Input} from '@angular/core';
 
 export class SearchResult {
-    id: string;
-    title: string;
-    description: string;
-    thumbnailUrl: string;
-    videoUrl: string;
+    public id: string;
+    public title: string;
+    public description: string;
+    public thumbnailUrl: string;
+    public videoUrl: string;
 
     constructor(obj?: any) {
         this.id = obj && obj.id || null;

@@ -3,15 +3,15 @@ import {FormGroup, FormBuilder, Validators, AbstractControl} from '@angular/form
 import {skuValidator} from './validators';
 
 @Component({
-    selector: 'sku-form',
+    selector: 'product-form',
     templateUrl: 'app/forms-app/product-form.html',
 })
 export class ProductForm {
-    myForm: FormGroup;
-    sku: AbstractControl;
-    productName: string;
+    public myForm: FormGroup;
+    public sku: AbstractControl;
+    public productName: string;
 
-    constructor (fb: FormBuilder) {
+    constructor(fb: FormBuilder) {
         this.myForm = fb.group({
             'sku': ['', Validators.compose([Validators.required, skuValidator])],
             'productName':  ['', Validators.required],
@@ -31,7 +31,7 @@ export class ProductForm {
         );
     }
 
-    onSubmit(form: any): void {
+    public onSubmit(form: any): void {
         console.log('you submitted value:', form);
     }
 }

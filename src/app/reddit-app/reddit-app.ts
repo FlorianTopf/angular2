@@ -7,9 +7,9 @@ import {Article} from '../reddit-article/article';
     templateUrl: 'app/reddit-app/reddit-app.html',
 })
 export class RedditApp {
-    articles: Article[];
+    public articles: Article[];
 
-    constructor () {
+    constructor() {
         console.info('RedditApp Component Mounted Successfully');
         this.articles = [
             new Article('Angular 2', 'http://angular.io', 10),

@@ -3,20 +3,19 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Product} from './product';
 
 @Component({
-    host: { 'class': 'item' },
+    host: { 'class': 'sixteen wide column' },
     selector: 'product-row',
     templateUrl: 'app/product-row/product-row.html',
 })
 export class ProductRow {
-    @Input() product: Product;
+    @Input() public product: Product;
+    @Output() public onSelect: EventEmitter<Product>;
 
-    @Output() onSelect: EventEmitter<Product>;
-
-    constructor () {
+    constructor() {
         this.onSelect = new EventEmitter<Product>();
     }
 
-    clicked (): void {
+    public clicked(): void {
         this.onSelect.emit(this.product);
     }
 }

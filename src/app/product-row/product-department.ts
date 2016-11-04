@@ -5,13 +5,13 @@ import {Product} from './product';
 @Component({
     selector: 'product-department',
     template:
-        `<div class="product-department">
-            <span *ngFor="let name of product.department; let i=index">
-                <a href="#">{{ name }}</a>
-                <span>{{i < (product.department.length-1) ? '>' : ''}}</span>
-            </span>
+        `<div class="ui breadcrumb">
+            <div class="section" *ngFor="let name of product.department; let i=index">
+                {{ name }}
+                <div class="divider">{{i < (product.department.length-1) ? '/' : ''}}</div>
+            </div>
         </div>`,
 })
 export class ProductDepartment {
-    @Input() product: Product;
+    @Input() public product: Product;
 }

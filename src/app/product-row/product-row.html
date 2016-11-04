@@ -1,8 +1,10 @@
-<div class="product-row cf" (click)="clicked()">
+<div class="ui message grid" (click)="clicked()">
     <product-image [product]="product"></product-image>
-    <div class="product-info">
-        <div class="product-sku">SKU #{{ product.sku }}</div>
-        <div class="product-name">{{ product.name }}</div>
+    <div class="six wide column">
+        <h4 class="ui header">SKU #{{ product.sku }}</h4>
+        <div class="ui divider"></div>
+        <h3 class="ui header">{{ product.name }}</h3>
+        <div class="ui divider"></div>
         <product-department [product]="product"></product-department>
     </div>
     <price-display [price]="product.price"></price-display>

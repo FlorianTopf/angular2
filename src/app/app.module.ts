@@ -23,7 +23,7 @@ import {HttpAppModule} from './http-app/http-app.module';
     bootstrap: [AppComponent],
 })
 export class AppModule {
-    constructor () {
+    constructor() {
         console.info('App Module Mounted Successfully');
     }
 }

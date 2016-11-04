@@ -7,9 +7,9 @@ import {Product} from '../product-row/product';
     templateUrl: 'app/inventory-app/inventory-app.html',
 })
 export class InventoryApp {
-    products: Product[];
+    public products: Product[];
 
-    constructor () {
+    constructor() {
         console.info('InventoryApp Component Mounted Successfully');
 
         this.products = [];
@@ -36,7 +36,7 @@ export class InventoryApp {
         ));
     }
 
-    productClicked (product: Product): void {
+    public productClicked(product: Product): void {
         console.log(`Product clicked: ${product.name}`);
     }
 }

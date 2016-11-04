@@ -8,18 +8,18 @@ import {Article} from './article';
     templateUrl: 'app/reddit-article/reddit-article.html',
 })
 export class RedditArticle {
-    @Input() article: Article;
+    @Input() public article: Article;
 
-    constructor () {
+    constructor() {
         console.info('RedditArticle Component Mounted Successfully');
     }
 
-    voteUp (): boolean {
+    public voteUp(): boolean {
         this.article.voteUp();
         return false;
     }
 
-    voteDown (): boolean {
+    public voteDown(): boolean {
         this.article.voteDown();
         return false;
     }
