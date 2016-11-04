@@ -4,7 +4,7 @@ import {skuValidator} from './validators';
 
 @Component({
     selector: 'product-form',
-    templateUrl: 'app/forms-app/product-form.html',
+    templateUrl: 'product-form.html',
 })
 export class ProductForm {
     public myForm: FormGroup;

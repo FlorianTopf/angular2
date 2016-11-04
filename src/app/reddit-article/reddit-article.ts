@@ -5,7 +5,7 @@ import {Article} from './article';
 @Component({
     host: {'class': 'row'},
     selector: 'reddit-article',
-    templateUrl: 'app/reddit-article/reddit-article.html',
+    templateUrl: 'reddit-article.html',
 })
 export class RedditArticle {
     @Input() public article: Article;

@@ -1,4 +1,5 @@
 .idea/
+.webpack.json
 node_modules/
 build/
 semantic/

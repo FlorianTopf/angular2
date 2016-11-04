@@ -4,7 +4,7 @@ import {Article} from '../reddit-article/article';
 
 @Component({
     selector: 'reddit-app',
-    templateUrl: 'app/reddit-app/reddit-app.html',
+    templateUrl: 'reddit-app.html',
 })
 export class RedditApp {
     public articles: Article[];

@@ -8,6 +8,8 @@ import {InventoryAppModule} from './inventory-app/inventory-app.module';
 import {FormsAppModule} from './forms-app/forms-app.module';
 import {HttpAppModule} from './http-app/http-app.module';
 
+import '../app.css';
+
 @NgModule({
     imports: [
         BrowserModule,
