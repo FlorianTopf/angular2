@@ -3,7 +3,7 @@ import {Http, Response} from '@angular/http';
 
 @Component({
     selector: 'simple-http',
-    templateUrl: 'app/http-app/simple-http.html',
+    templateUrl: 'simple-http.html',
 })
 export class SimpleHttpComponent {
     public data: Object;

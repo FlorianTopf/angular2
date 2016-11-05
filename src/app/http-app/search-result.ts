@@ -18,7 +18,7 @@ export class SearchResult {
 
 @Component({
     selector: 'search-result',
-    templateUrl: 'app/http-app/search-result.html',
+    templateUrl: 'search-result.html',
 })
 export class SearchResultComponent {
     @Input() public result: SearchResult;

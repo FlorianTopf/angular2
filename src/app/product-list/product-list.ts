@@ -4,7 +4,7 @@ import {Product} from '../product-row/product';
 
 @Component({
     selector: 'products-list',
-    templateUrl: 'app/product-list/product-list.html',
+    templateUrl: 'product-list.html',
 })
 export class ProductsList {
     @Input('products') public productList: Product[];

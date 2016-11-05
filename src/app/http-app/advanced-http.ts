@@ -3,7 +3,7 @@ import {Http, Response, RequestOptions, Headers} from '@angular/http';
 
 @Component({
     selector: 'advanced-http',
-    templateUrl: 'app/http-app/advanced-http.html',
+    templateUrl: 'advanced-http.html',
 })
 export class AdvancedHttpComponent {
     public data: Object;
